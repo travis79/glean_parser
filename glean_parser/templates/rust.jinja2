@@ -69,7 +69,7 @@ pub mod {{ category.name|snake_case }} {
             name: {{ obj.name|rust }},
             send_in_pings: {{ obj.send_in_pings|rust }},
             lifetime: {{ obj.lifetime|rust }},
-            disabled: {{ obj.is_disabled()|rust }},
+            disabled: {{ obj.is_disabled()|int }},
             ..Default::default()
         }
         {%- for arg_name in extra_metric_args if obj[arg_name] is defined and arg_name != 'allowed_extra_keys' -%}

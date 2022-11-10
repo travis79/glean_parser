@@ -137,7 +137,7 @@ extension {{ namespace }} {
             name: {{ obj.name|swift }},
             sendInPings: {{ obj.send_in_pings|swift }},
             lifetime: {{ obj.lifetime|swift }},
-            disabled: {{ obj.is_disabled()|swift }},
+            disabled: {{ obj.is_disabled()|int }},
             subMetric: {{ obj.name|camelize }}Label,
             labels: {{ obj.labels|swift }}
         )

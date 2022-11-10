@@ -112,7 +112,7 @@ internal object {{ category_name|Camelize }} {
             category = {{ obj.category|kotlin }},
             name = {{ obj.name|kotlin }},
             subMetric = {{ obj.name|camelize }}Label,
-            disabled = {{ obj.is_disabled()|kotlin }},
+            disabled = {{ obj.is_disabled()|int }},
             lifetime = {{ obj.lifetime|kotlin }},
             sendInPings = {{ obj.send_in_pings|kotlin }},
             labels = {{ obj.labels|kotlin }}
